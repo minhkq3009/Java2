@@ -33,11 +33,15 @@ public class AddressBook {
     }
 
     public void displayContacts() {
-        System.out.println("Contacts in the Address Book:");
+        System.out.println("Address Book");
+        System.out.printf("%-15s %-15s\n", "Contact Name", "Phone number");
+        System.out.println("-----------------------------");
+
         for (Map.Entry<String, Contact> entry : addressBook.entrySet()) {
             Contact contact = entry.getValue();
-            System.out.println("Name: " + contact.getName() + ", Phone: " + contact.getPhone());
+            System.out.printf("%-15s %-15s\n", contact.getName(), contact.getPhone());
         }
+        System.out.println();
     }
 
     public void closeScanner() {
